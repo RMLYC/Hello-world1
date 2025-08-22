@@ -1,0 +1,12 @@
+image: 192.168.90.119:5000/inference_image_cuda_aica:latest
+stages:
+  - test
+
+hello_world:
+  stage: test
+  tags: 
+    - aigc-Aigcic4torch
+  script:
+    - echo "Hello！"
+  only:
+    - branches
